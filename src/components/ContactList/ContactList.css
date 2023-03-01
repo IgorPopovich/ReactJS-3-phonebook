@@ -1,0 +1,28 @@
+.todos {
+    width: 400px;
+}
+
+.item {
+    display: flex;
+    align-items: center;
+    padding: 6px;
+    border-radius: 5px;
+    border: 1px solid rgb(196, 196, 196);
+    margin-top: 5px;
+}
+
+.text {
+    margin-top: 0;
+    margin-bottom: 0;
+    margin-right: 10px;
+}
+
+.delete {
+    font-size: 11px;
+    border-radius: 5px;
+    padding: 3px 6px 3px 6px;
+    border: 1px solid rgb(196, 196, 196);
+    cursor: pointer;
+    height: 20px;
+    margin-left: auto;
+}
