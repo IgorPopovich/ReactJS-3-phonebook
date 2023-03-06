@@ -8,5 +8,10 @@
     padding: 5px;
     outline: none;
     margin-bottom: 12px;
-    margin-top: 3px;
+    margin-top: 8px;
+    margin-left: 10px;
+}
+
+.label {
+    margin-left: 10px;
 }

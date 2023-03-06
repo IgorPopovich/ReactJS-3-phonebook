@@ -1,12 +1,14 @@
-import './Filter.css';
+
+import css from './Filter.module.css';
+import PropTypes from 'prop-types';
 
 const Filter = ({ value, onChange }) => {
     return (
-      <label>
+      <label className={css.label}>
         Find contacts by name
         <input
             onChange={ onChange }
-            className='value'
+            className={css.value}
             type="text"
             value={value}
             name="name"
@@ -16,5 +18,10 @@ const Filter = ({ value, onChange }) => {
       </label>
   );
 };
+
+Filter.propTypes = {
+  value: PropTypes.string,
+  onChange: PropTypes.func,
+}; 
 
 export default Filter;

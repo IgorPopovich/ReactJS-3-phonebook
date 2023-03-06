@@ -2,7 +2,8 @@ import React, { Component } from 'react';
 import ContactList from './ContactList/ContactList';
 import ContactForm from './ContactForm/ContactForm';
 import Filter from './Filter/Filter';
-import './App.css';
+import css from './App.module.css';
+import PropTypes from 'prop-types';
 
 
 class App extends Component {
@@ -57,16 +58,21 @@ class App extends Component {
       contact.name.toLocaleLowerCase().includes(normalSize)
     )
     return (
-    <div className='main'>
-      <h1 className='title'>Phonebook</h1>
-      <ContactForm addContact={this.handleSubmitForm} />
+      <div className={css.main}>
+        <h1 className={css.title}>Phonebook</h1>
+        <ContactForm addContact={this.handleSubmitForm} />
 
-      <h2 className='title'>Contacts</h2>
-      <Filter value={filter} onChange={this.onChangeFilter} />
-      <ContactList contacts={visibleContacts} onDelete={this.deleteContact} />
-    </div>
-  );
+        <h2 className={css.title}>Contacts</h2>
+        <Filter value={filter} onChange={this.onChangeFilter} />
+        <ContactList contacts={visibleContacts} onDelete={this.deleteContact} />
+      </div>
+    );
   }
 };
+
+App.propTypes = {
+  contacts: PropTypes.array,
+  filter: PropTypes.string,
+}; 
 
 export default App;
